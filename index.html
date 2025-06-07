@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>chudu 💖</title>
+    <style>
+      @keyframes floatUp {
+        0% { transform: translateY(0); opacity: 1; }
+        100% { transform: translateY(-150vh); opacity: 0; }
+      }
+
+      button:hover {
+        transform: scale(1.05);
+        background-color: pink;
+        transition: 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Aur bhenkelode 🧁</h1>
+    <p>phuck U 💕</p>
+    <p>Tu gendu hai, Tha aur hamesha rhega lode😘</p>
+
+    <p style="color:rgb(226, 100, 163); font-size:20px; font-family:Comic Sans MS;">
+      5-11 yaad hai ya bhul gaya? 💖
+    </p>
+
+    <!-- 🔘 Button to show video (left aligned) -->
+    <div id="gifButtonContainer" style="margin-left: 0;">
+      <button onclick="showVideo()">Click to see something sexy 😏</button>
+    </div>
+
+    <!-- 🎥 Video that replaces gif (left aligned, same spot as GIF was) -->
+    <div id="videoContainer" style="display:none; margin-left: 0;">
+      <video width="300" autoplay loop muted style="border-radius:10px;">
+        <source src="shubhu.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div style="border: 3px dashed pink; padding: 20px; background-color: #fff0f5; border-radius: 15px;">
+      <h2 style="text-align:center;">Bauna fir bhi bauna hai, Chahe parvat ke shikhar pe kyu na ho. 💕</h2>
+      <p style="font-size:18px; font-family:cursive; text-align:center;">
+        Aur devta fir bhi devta hai chahe, kue ki gehraiyo me kyu na ho 💻💞
+      </p>
+    </div>
+
+    <p id="secret" style="display:none; color:purple; font-size:20px;">
+      AAN MERI JANNNN
+    </p>
+
+    <!-- 1️⃣ First Button: Secret Message -->
+    <div id="btn1">
+      <button onclick="showSecret()">Click me for a secret message 😘</button>
+    </div>
+    <br>
+
+    <!-- 2️⃣ Second Button -->
+    <div id="btn2" style="display:none;">
+      <button onclick="showAlert()">Click me, kuttia 💘</button>
+    </div>
+    <br>
+
+    <!-- 3️⃣ Third Button -->
+    <div id="btn3" style="display:none;">
+      <button onclick="setBg()">click kar kuch dikhata hu 💖</button>
+    </div>
+    <br>
+
+    <!-- 4️⃣ Final Button -->
+    <div id="btn4" style="display:none;">
+      <button onclick="showSurprise()">are ruk ruk ruk, is baar sachme kuch accha hai 🌷✨️</button>
+    </div>
+
+    <!-- 💿 Hidden Audio -->
+    <audio id="loveSong" src="lalala.mp3"></audio>
+
+    <!-- 🖼️ Hidden Image Placeholder -->
+    <div id="surpriseBox" style="display:none; text-align:center; margin-top:20px;">
+      <img src="lalalala.jpg" width="300" style="border-radius: 15px;">
+    </div>
+
+    <script>
+      function showVideo() {
+        document.getElementById("gifButtonContainer").style.display = "none";
+        document.getElementById("videoContainer").style.display = "block";
+      }
+
+      function showSecret() {
+        document.getElementById('secret').style.display = 'block';
+        document.getElementById('btn1').style.display = 'none';
+        document.getElementById('btn2').style.display = 'block';
+      }
+
+      function showAlert() {
+        alert('WHY ARE YOU GAY 😍');
+        document.getElementById('btn2').style.display = 'none';
+        document.getElementById('btn3').style.display = 'block';
+      }
+
+      function setBg() {
+        document.body.style.backgroundImage = 'url(bg.jpg)';
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.backgroundRepeat = 'no-repeat';
+        document.body.style.backgroundPosition = 'center';
+        document.getElementById('btn3').style.display = 'none';
+        document.getElementById('btn4').style.display = 'block';
+      }
+
+      function showSurprise() {
+        document.getElementById("surpriseBox").style.display = "block";
+        document.getElementById("loveSong").play();
+
+        for (let i = 0; i < 20; i++) {
+          let heart = document.createElement("div");
+          heart.innerHTML = "💖";
+          heart.style.position = "fixed";
+          heart.style.left = Math.random() * 100 + "vw";
+          heart.style.top = "100vh";
+          heart.style.fontSize = Math.random() * 30 + 20 + "px";
+          heart.style.animation = "floatUp 4s ease-out forwards";
+          document.body.appendChild(heart);
+
+          setTimeout(() => heart.remove(), 4000);
+        }
+      }
+    </script>
+  </body>
+</html>
