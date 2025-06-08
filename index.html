@@ -110,7 +110,7 @@
         document.getElementById("surpriseBox").style.display = "block";
         document.getElementById("loveSong").play();
 
-        for (let i = 0; i < 20; i++) {
+        setInterval(() => {
           let heart = document.createElement("div");
           heart.innerHTML = "💖";
           heart.style.position = "fixed";
@@ -118,10 +118,11 @@
           heart.style.top = "100vh";
           heart.style.fontSize = Math.random() * 30 + 20 + "px";
           heart.style.animation = "floatUp 4s ease-out forwards";
+          heart.style.pointerEvents = "none";
           document.body.appendChild(heart);
 
           setTimeout(() => heart.remove(), 4000);
-        }
+        }, 300);
       }
     </script>
   </body>
